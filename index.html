@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+  <body>
+    <header>
+      <link rel="stylesheet" href="addressbookstyling.css" type="text/css">
+      <!--Google APIs for font and icons used for buttons-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <h1>Address Book</h1>
+    </header>
+    <div class="search">
+      <input type="text" id="searchentry" placeholder="Search Address Book">
+    </div>
+    <button type="submit" id="addcontact"><span class="material-icons">
+        person_add
+      </span></button>
+    <div id="form" style="display:none">
+      <!--To develop further could include <form> as oppose to div so data could be stored for continued use. Was not sure how to do this.-->
+      <section>
+        <input class="newcontact" type="text" placeholder="First name" id="firstname">
+      </section>
+      <section>
+        <input class="newcontact" type="text" placeholder="Last name" id="lastname">
+      </section>
+      <section>
+        <input class="newcontact" placeholder="Phone number" type="text" id="phonenumber">
+        <section>
+          <input class="newcontact" placeholder="Address" type="text" id="address">
+        </section>
+      </section>
+      <section class="submission">
+        <button type="submit" id="submit"><span class="material-icons">
+            done
+          </span></button>
+        <button type="submit" id="hide"><span class="material-icons">
+            expand_less
+          </span></button>
+      </section>
+    </div>
+    <!--Table to store contacts-->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3">Contacts</th>
+        </tr>
+      </thead>
+      <tbody id="addressBook">
+      </tbody>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="addressbookscript.js"></script>
+  </body>
+
+</html>
